@@ -323,6 +323,154 @@ int main()
 
 */
 
+//Note-8:
+//this Pointer
+/* C++ has a pointer called 'this'.
 
+'this' returns its own address.
+
+There are a few cases where 'this' might be necessary,
+but often using it is considered a stylistic preference. */
+
+ //Use 'this' to compare areas
+ //The class functions
+      int compareWithThis(Shape shape) 
+      {
+         //return the area of the calling shape
+         return this->Area() > shape.Area(); 
+      }
+
+//Using the class function in a program
+//In this case sh1.Area() is being compared to sh2.Area()
+
+   if(sh1.compareWithThis(sh2)) {
+      cout << "\nShape2 is smaller than Shape1" <<endl;
+   } 
+//perform the exact same function and not use 'this'.
+
+     //'this' is not necessary to compare shapes
+      int compare(Shape shapeIn) 
+      {
+         return Area() > shapeIn.Area();
+      }
+
+//use the class function:
+
+   if(sh1.compare(sh2)) 
+   {
+      cout << "\nShape2 is smaller than Shape1" <<endl;
+   } 
+//Complete example
+
+#include <iostream>
+ 
+using namespace std;
+
+class Shape {
+   public:
+      // Constructor definition
+      Shape(int l = 2, int w = 2) 
+      {
+         length = l;
+         width = w;
+      }
+		
+      double Area() 
+      {
+         return length * width;
+      }
+		
+	  //Use 'this' to compare areas
+      int compareWithThis(Shape shape) 
+      {
+         return this->Area() > shape.Area();
+      }
+
+      //'this' is not necessary to compare shapes
+      int compare(Shape shapeIn) 
+      {
+         return Area() > shapeIn.Area();
+      }
+      
+   private:
+      int length;     // Length of a box
+      int width;
+};
+
+int main(void) 
+{
+   Shape sh1(4, 4);    // Declare shape1
+   Shape sh2(2, 6);    // Declare shape2
+
+   if(sh1.compare(sh2)) 
+   {
+      cout << "\nShape2 is smaller than Shape1" <<endl;
+   } 
+   else 
+   {
+      cout << "\nShape2 is equal to or larger than Shape1" <<endl;
+   }
+
+   if(sh1.compareWithThis(sh2)) {
+      cout << "\nShape2 is smaller than Shape1" <<endl;
+   } 
+   else 
+   {
+      cout << "Shape2 is equal to or larger than Shape1" <<endl;
+   }
+   
+   return 0;
+}
+
+//Note-9
+/*
+C++ allows class constructors to accept parameters. These parameters will set the values of class members when the object is created.
+
+Let's look at an example of a Constructor with Parameters.*/
+
+//main.cpp
+#include "main.hpp"
+
+int main()
+{
+    //an instance of Patient is
+    //instanciated with a name
+    Patient p1("Tammy Smith");  
+    cout<<p1.getName();
+    return 0;
+}
+//main.hpp
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Patient
+{
+    private:
+        string name;
+    public:
+        //The constructor accepts a name parameter
+        Patient(string input);
+        void setName(string input);
+        string getName();
+};
+
+Patient::Patient(string input)
+{
+    //when an object is created
+    //the name must be added as a parameter
+    name = input;
+}
+
+void Patient::setName(string input)
+{
+    name = input;
+}
+
+string Patient::getName()
+{
+    return name;
+}
 
 
