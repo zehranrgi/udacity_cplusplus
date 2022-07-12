@@ -1,6 +1,11 @@
 //Note-1:
+/*Assigning the address of a variable to a pointer using unary operator (&)
+which returns the address of that variable.
+Accessing the value stored in the address using unary operator (*)
+which returns the value of the variable located at the address specified by its operand.
+*/
+/* this is an integer variable with value = 54 */ 
 
-// this is an integer variable with value = 54
 int a = 54; 
 
 // this is a pointer that holds the address of the variable 'a'.
