@@ -1,4 +1,4 @@
-What is a static member variable?
+* What is a static member variable?
 
 A static member variable means that the variable is shared between all instances of the class.
 
@@ -11,3 +11,6 @@ if it can be made static, it is a good idea to speed up execution of the program
 On the flip side, it can also be expensive to use a static variable. 
 If using a static variable requires the CPU to fetch the variable from slower memory,
 rather than having it in the cache or stack. Each fetch from slower memory slows down execution time.
+
+* using namespace std?
+https://www.geeksforgeeks.org/using-namespace-std-considered-bad-practice/
