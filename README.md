@@ -1,6 +1,6 @@
 # udacity_cplusplus_intro
 
-There are 13 parts in the course. In the notebooks, there are some links for better understand the concepts and there are example codes to cover the usage of them. 
+There are 13 parts in the course. In the notebooks, there are some links for better understanding the concepts and there are example codes to cover the usage of them. 
 
 [LESSON 1](https://github.com/zehranrgi/udacity_cplusplus/blob/main/intro_cplusplus_lesson1.cpp)
 The Basics
