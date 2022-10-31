@@ -29,6 +29,7 @@ We will do a preliminary exploration of two dimensional and multi-dimensional ar
 
 [LESSON 6](https://github.com/zehranrgi/udacity_cplusplus/blob/main/funct_lesson6.cpp)
 Functions
+
 Functions with and without return values, with and without parameters, and passing by reference are demonstrated and used in this lesson.
 
 [LESSON 7](https://github.com/zehranrgi/udacity_cplusplus/blob/main/class_lesson7.cpp)
